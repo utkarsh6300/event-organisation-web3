@@ -2,6 +2,7 @@
 
 # dependencies
 react1/node_modules
+truffle/node_modules
 
 /node_modules
 # misc

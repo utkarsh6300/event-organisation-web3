@@ -42,9 +42,8 @@
  */
 
 // require('dotenv').config();
-// const { MNEMONIC, PROJECT_ID } = process.env;
-const PROJECT_ID  ="bb476931830a434486a7ca1e4e7d0dac";
-const MNEMONIC="session balance doll taxi puzzle earn fun cushion light direct junior moment";
+const { MNEMONIC, PROJECT_ID } = process.env;
+
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
@@ -58,7 +57,7 @@ module.exports = {
    *
    * $ truffle test --network <network-name>
    */
-  //  contracts_build_directory: "../react1/src/contracts",
+   contracts_build_directory: "../react1/src/contracts",
    
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default

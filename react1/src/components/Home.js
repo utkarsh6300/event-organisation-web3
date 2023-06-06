@@ -2,7 +2,9 @@ import React,{useState,useEffect} from 'react'
 import getWeb3 from "../getWeb3";
 import EventOrganisation from "../contracts/EventOrganisation.json"
 import ShowData from './ShowData';
-
+import { Route ,Routes} from 'react-router-dom';
+import CreateEvent from './CreateEvent';
+import { Nav } from './Nav';
 
   
   const Home = () => {
@@ -44,15 +46,19 @@ import ShowData from './ShowData';
         onload();
         // console.log(details);
       }, [])
-      
+    
     return (
-      <div> 
+      <> 
         <h1>
-        home
+        Event organisation
         </h1>
-    <ShowData details={details}/>
-
-      </div>
+      <Nav/>
+        <Routes>
+   <Route index element={<CreateEvent details={details}/> }/>
+   <Route path='/events' element={<ShowData details={details}/> }/>
+   <Route path='/createevent' element={  <CreateEvent details={details}/>}/>
+        </Routes>
+      </>
     )
   }
   

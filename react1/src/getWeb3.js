@@ -1,20 +1,3 @@
-// import React from 'react';
-// const Web3 = require('web3');
-
-
-
-// const web3 = new Web3(Web3.givenProvider || "ws://localhost:7545");
-// const getWeb3 = () => {
-//  console.log(window.ethereum)
-//  console.log(window.web3)
-//   web3.eth.getAccounts().then(e => console.log(e));
-//   return (
-//     <div>j</div>
-//   )
-// }
-
-// export default getWeb3
-
 import Web3 from "web3";
 
 const getWeb3 = () =>

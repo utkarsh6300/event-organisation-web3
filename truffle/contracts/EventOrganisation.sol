@@ -28,7 +28,7 @@ contract EventOrganisation {
    require(events[id].date!=0,"Event does not exist");
    require(events[id].date>block.timestamp,"Event has already occured");
    Event storage _event = events[id];
-   require(msg.value==(_event.price*quantity),"Ethere is not enough");
+   require(msg.value==(_event.price*quantity),"Ether is not enough");   //store every events collection and pay to orgainser after event date
    require(_event.ticketRemain>=quantity,"Not enough tickets");
    _event.ticketRemain-=quantity;
    tickets[msg.sender][id]+=quantity;
